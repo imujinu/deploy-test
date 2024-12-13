@@ -1,0 +1,7 @@
+node_modules/
+
+# config.json에 추가해야함!
+config.json
+
+#env는 gitignore에 추가해야 함!
+.env
