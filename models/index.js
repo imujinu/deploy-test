@@ -2,8 +2,13 @@
 
 const Sequelize = require("sequelize");
 let config = require(__dirname + "/../config/config.js");
-config = config["development"];
-console.log("config>>>", config);
+const env = process.env.NODE_ENV || "development"; // 추가
+// development, production, undefined
+console.log("env::", env);
+console.log("NODE_ENV", process.env.NODE_ENV);
+
+config = config[env]; // "development" > env
+// console.log("config>>>", config);
 const db = {};
 
 let sequelize = new Sequelize(
